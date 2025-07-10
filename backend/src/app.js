@@ -20,7 +20,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: true,
+    origin: 'https://idurar-erp-crm-nine.vercel.app/',
     credentials: true,
   })
 );
