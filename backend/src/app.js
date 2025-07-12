@@ -36,6 +36,11 @@ app.use(compression());
 
 // Here our API Routes
 
+app.get('/api/test', (req, res) => {
+  res.json({ success: true, message: 'API is working!' });
+});
+
+
 app.use('/api', coreAuthRouter);
 app.use('/api', adminAuth.isValidAuthToken, coreApiRouter);
 app.use('/api', adminAuth.isValidAuthToken, erpApiRouter);
